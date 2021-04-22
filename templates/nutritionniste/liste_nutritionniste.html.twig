@@ -1,0 +1,203 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+    <div class="content">
+        <div style="display: flex; align-items: center; justify-content: space-between">
+            <h1 style="margin-right: 20px">Liste des Nutritionniste</h1>
+            <button data-bs-toggle="modal" data-bs-target="#addModal" class="btn btn-outline-success" style="width: 100px"><i class="nc-icon nc-simple-add" style="font-size: 28px"></i></button>
+        </div>
+
+
+        <br>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prenom</th>
+                <th scope="col">Adresse</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Teléphone</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <tr {% for n in nutritionniste %}>
+                <td> <img style="width: 100px" src="{{ asset('uploads/' ~ n.image) }}"> </td>
+                <td >{{ n.no}}</td>
+                <td >{{ n.prenom }}</td>
+                <td>{{ n.addr }}</td>
+                <td>{{ n.mail }}</td>
+                <td>{{ n.num }}</td>
+                <td><div style="display: flex">
+
+                        <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#updateModal{{ n.id }}" style="margin-right: 10px"><i class="nc-icon nc-settings"></i></button>
+
+                        <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ n.id }}"><i class="nc-icon nc-simple-delete"></i></button>
+
+                    </div>
+                </td>
+            </tr>
+            <!-- Delete Modal -->
+            <div class="modal fade" id="deleteModal{{ n.id }}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <br>
+                            <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimer la nutritionniste {{ n.no }}</h5>
+                            <br>
+                            <div style="text-align: center">
+                                <a type="button" href="{{ path('delete_nutritionniste', {'id':n.id}) }}" class="btn btn-danger">Supprimer</a>
+                                <a type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</a>
+                            </div>
+                            <br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!--  Update Modal -->
+            <div class="modal fade" id="updateModal{{ n.id }}" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <form method="post" action="{{ path('update_nutritionniste', {'id':n.id}) }}" enctype="multipart/form-data">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modifier Nutritionniste </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <br>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label class="form__label">Photo du couverture</label>
+                                        <input type="file" name="image" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label class="form__label">Nom</label>
+                                        <input type="text" maxlength="30" name="no" value="{{ n.no }}" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label class="form__label">Prenom</label>
+                                        <input type="text" min="1" max="99" name="prenom" value="{{ n.prenom }}" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+
+                                <br>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label class="form__label">Addresse</label>
+                                        <textarea name="addr" class="form-control">{{ n.addr }}</textarea>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label class="form__label">E-mail</label>
+                                        <input type="text" name="mail" value="{{ n.mail }}" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label class="form__label">Numéro Télephone</label>
+                                        <input type="text" name="num" value="{{ n.num }}" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Modifier</button>
+                                    <button type="button" class="btn btn-secondary">Fermer</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                {% endfor %}
+            </div>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <!-- Add Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                {{ form_start(form, {'attr': {'enctype':'multipart/form-data'}}) }}
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ajouter un Nouvelle Nutritionniste</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="form__label">Photo Nutritionniste</label>
+                            {{ form_widget(form.image, {'attr': {'class':'form-control'}}) }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="form__label">Nom</label>
+                            {{ form_widget(form.no, {'attr': {'placeholder': 'Nom  nutritionniste', 'class':'form-control', 'type':'text'}}) }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="form__label">Prenom</label>
+                            {{ form_widget(form.prenom, {'attr': {'placeholder': 'Prenom nutritionniste', 'class':'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+
+                        <div class="col-md-12">
+                            <label class="form__label">Adresse</label>
+                            {{ form_widget(form.addr, {'attr': {'placeholder': 'Adresse nutritionniste', 'class':'form-control', 'type':'text'}}) }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+
+                        <div class="col-md-12">
+                            <label class="form__label">E-mail</label>
+                            {{ form_widget(form.mail, {'attr': {'placeholder': 'E-mail nutritionniste', 'class':'form-control', 'type':'text'}}) }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="form__label">Telephone</label>
+                            {{ form_widget(form.num, {'attr': {'placeholder': 'Telephone nutritionniste', 'class':'form-control', 'type':'text'}}) }}
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
