@@ -10,10 +10,18 @@
             <button data-bs-toggle="modal" data-bs-target="#addModal" class="btn btn-outline-success" style="width: 100px"><i class="nc-icon nc-simple-add" style="font-size: 28px"></i></button>
         </div>
 
+        <div style="margin-left: 200px">
 
-        <br>
-        <table class="table table-hover">
-            <thead>
+            <script src="{{ asset('back/js/jquery.min.js') }}"></script>
+            <div class="input-group no-border">
+            <center><input type="text" id="search" class="form-control" placeholder="Search nutritionniste"></center>
+            <div class="input-group-text">
+                <i class="nc-icon nc-zoom-split"></i>
+            </div>
+            </div>
+        </div>
+       <br>
+        <table class="table table-bordered dataTable" id="tableac" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">            <thead>
             <tr>
                 <th scope="col">Image</th>
                 <th scope="col">Nom</th>
@@ -43,6 +51,35 @@
                     </div>
                 </td>
             </tr>
+
+            <script>
+                $(document).ready(function(){
+                    $('#search').keyup(function(){
+                        search_table($(this).val());
+                    });
+                    function search_table(value){
+                        $('#tableac tbody tr').each(function(){
+                            var found = 'false';
+                            $(this).each(function(){
+                                if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                                {
+                                    found = 'true';
+                                }
+                            });
+                            if(found == 'true')
+                            {
+                                $(this).show();
+
+                            }
+                            else
+                            {
+                                $(this).hide();
+
+                            }
+                        });
+                    }
+                });
+            </script>
             <!-- Delete Modal -->
             <div class="modal fade" id="deleteModal{{ n.id }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog">
