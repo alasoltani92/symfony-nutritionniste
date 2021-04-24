@@ -39,6 +39,15 @@ class Nutritionniste
      *     message = "le email '{{ value }}' n'est pas valid email."
      * )
      */
+
+
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * * @Assert\Email(
+     *     message = "le email '{{ value }}' n'est pas valid email."
+     * )
+     */
     private $mail;
 
     /**
@@ -129,4 +138,10 @@ class Nutritionniste
 
         return $this;
     }
+    //taha
+
+
+
+
+
 }

@@ -13,7 +13,13 @@ class NutritionnisteType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+
         $builder
+
+
+            ->add('body', TextareaType::class, [
+                'attr' => ['class' => 'nom']])
+
             ->add('no')
             ->add('prenom')
             ->add('addr')

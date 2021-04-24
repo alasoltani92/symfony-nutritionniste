@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Form\ContactType;
 
 class NutritionnisteController extends AbstractController
 {
@@ -103,7 +104,43 @@ class NutritionnisteController extends AbstractController
         return $this->render('nutritionniste/liste_nutritionniste_front.html.twig', ["nutritionniste"=>$nutritionniste]);
     }
 
+    /**
+     * @Route("/front/liste-nutritionnistet-frontjjjjjj", name="contact")
+     */
+    public function mail(Request $request ,\Swift_Mailer $mailer)
+    {
+      /*  $form=$this->createForm((ContactType::class));
+        $form->handleRequest($request);
+        if($form->isSubmitted()&& $form->isValid()){
+            $contact=$form->getData();
 
+            $message=(new \Swift_Message('nouveau message'))
+                ->setFrom($contact['mail'])
+                ->setTo( $request->request->get('nom'))
+                ->setBody(
+                    $request->request->get('message')
+                );
+
+            $mailer->send($message);
+            $this->addFlash('message','le message est bien ete envoyer');
+            return $this->redirectToRoute('liste_nutritionniste_front');
+        }
+       return $this->render('nutritionniste/index.html.twig', [
+            'contactform' => $form->createView()
+        ]);
+*/
+
+
+        $message = (new \Swift_Message('Hello Email'))
+            ->setFrom('soltani.taha90@gmail.com')
+            ->setTo('medaladin92@gmail.com')
+            ->setBody('You should see me from the profiler!')
+        ;
+
+        $mailer->send($message);
+
+        return $this->redirectToRoute('liste_nutritionniste_front');
+    }
 
     /**
      * @return string
