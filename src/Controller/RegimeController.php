@@ -84,11 +84,11 @@ class RegimeController extends AbstractController
     /**
      * @Route("/admin/delete-regime/{id}", name="delete_regime")
      */
-    public function delete($id, EntityManagerInterface $regime): Response
+    public function delete($id, EntityManagerInterface $manager): Response
     {
         $regime = $this->getDoctrine()->getRepository(Regime::class)->find($id);
-        $regime->remove($regime);
-        $regime->flush();
+        $manager->remove($regime);
+        $manager->flush();
         return $this->redirectToRoute('admin_regime');
     }
 

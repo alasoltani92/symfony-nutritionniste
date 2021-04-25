@@ -200,4 +200,13 @@
     </div>
 
 
+    {% block javascripts %}
+        {% if less_products is defined %}
+            {% for item in less_products %}
+                <script>
+                    demo.showNotification('top','right', 'Quantity of the product {{item.getName}} is less than 5');
+                </script>
+            {% endfor %}
+        {% endif %}
+    {% endblock %}
 {% endblock %}

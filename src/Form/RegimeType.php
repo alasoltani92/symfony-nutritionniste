@@ -8,13 +8,21 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Validator\Constraints\File;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class RegimeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('type')
+            ->add('type',ChoiceType::class, [
+                'choices'  => [
+
+                    'Mincisseur' => 'Mincisseur',
+                    'Prise de Masse' => 'Prise de Masse',
+                ]])
+
+
             ->add('description')
             ->add('image',FileType::class, ['constraints' => [
                 new File([

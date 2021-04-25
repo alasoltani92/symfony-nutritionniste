@@ -23,6 +23,7 @@
 
             <div class="row">
                 {% for n in nutritionniste %}
+
                     <div class="col-md-3" style="margin-bottom: 40px">
                         <!-- Post-->
                         <div class="post post-classic"><a class="post-media" href="#"><img class="post-img" src="{{ asset('uploads/' ~ n.image) }}" alt="" style="width: 200px;height: 200px; object-fit: cover">
@@ -35,13 +36,58 @@
                                     <div class="post-date">{{ n.mail }}</div>
                                     <div class="post-date">{{ n.num }}</div>
                                 </div>
+
+                                <!-- Button to Open the Modal -->
+                                <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#myModal{{ n.mail }}">
+                                    Open modal
+                                </button>
+
+
                             </div>
-                            <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#updateModal" style="margin-right: 10px"><i class="nc-icon nc-settings"></i></button>
+
+
+
+
+
                         </div>
 
                     </div>
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal{{ n.mail }}">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Modal Heading</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <input type="text" min="1" max="99" name="mail_nut_env" id="mail_nut" value="{{ n.mail }}" class="form-control">
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <div align="left" >
+
+                                        <a type="button" href="{{ path('contact') }}" class="btn btn-success"  class="btn btn-danger">Envoyer</a>
+
+
+                                    </div>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 {% endfor %}
+
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
             </div>
         </div>
         </div>

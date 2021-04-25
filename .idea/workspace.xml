@@ -9,40 +9,12 @@
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/web_profiler.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210423012316.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210423070258.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210424000024.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20210424164807.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/back/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/2feee59f567573a7788f533dd44bad29.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/4408abf049af4089cd7ce8105ac7097f.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/45b96b20ddb1b950d029a8c80ff77479.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/67ebf99bb9d9dadf8a59187af09557a5.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/70278546a0ff43432587d6dc6c6c1982.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/767f88a8c75a41238815fcac7c900695.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/855f0c0e930bf8a53e6cd12ff4ebda87.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/9bb27b092bc38a10cce46e95ff81c1bf.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/aa0f00955192edaf269439dc6503a67a.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/c54c41bfeb5d13da712da4762f7b664b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/d1815b2ea4b067f0ae7aa58bc06a4092.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/d49a515e373e3b0b277d5526acbdf7cc.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/dc9f5914cd6d2c05e443bd4ec0d8639e.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/df91dafc89557eab9d24e414b580c52b.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/e37142246b26648e5e241a5af47a6b35.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Contact.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Nutritionniste.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Nutritionniste.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/NutritionnisteType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NutritionnisteType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ContactRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegimeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegimeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegimeType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-front.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navbar_front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar_front.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nutritionniste/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nutritionniste/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste_front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste_front.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/regime/liste_regime.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/regime/liste_regime.html.twig" afterDir="false" />
@@ -61,44 +33,45 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="8" />
-          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="env" value="1" />
+          <entry key="env" value="2" />
           <entry key="json" value="1" />
-          <entry key="php" value="47" />
-          <entry key="twig" value="57" />
+          <entry key="php" value="52" />
+          <entry key="twig" value="66" />
           <entry key="yaml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PHP" value="47" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Twig" value="57" />
+          <entry key="PHP" value="52" />
+          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="Twig" value="66" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="601" />
-          <entry key="twig" value="463" />
+          <entry key="env" value="85" />
+          <entry key="php" value="750" />
+          <entry key="twig" value="908" />
           <entry key="txt" value="4" />
           <entry key="yaml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="601" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Twig" value="463" />
+          <entry key="PHP" value="750" />
+          <entry key="PLAIN_TEXT" value="89" />
+          <entry key="Twig" value="908" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
@@ -132,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/NutritionnisteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="89" column="5" selection-end-line="117" />
+            <state relative-caret-position="99">
+              <caret line="89" column="63" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="63" />
               <folding>
                 <element signature="e#34#64#0#PHP" expanded="true" />
               </folding>
@@ -142,40 +115,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Nutritionniste.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/RegimeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="26" column="32" selection-end-line="132" />
-              <folding>
-                <element signature="e#30#74#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="86" column="63" selection-start-line="86" selection-start-column="63" selection-end-line="86" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/NutritionnisteType.php">
+        <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="5" selection-end-line="41" />
+            <state relative-caret-position="221">
+              <caret line="78" column="41" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base-front.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste_front.html.twig">
+        <entry file="file://$PROJECT_DIR$/templates/navbar_front.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+            <state relative-caret-position="119">
+              <caret line="155" selection-start-line="155" selection-end-line="155" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Repository/NutritionnisteRepository.php">
+        <entry file="file://$PROJECT_DIR$/templates/footer.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="5" selection-end-line="50" />
+            <state relative-caret-position="119">
+              <caret line="46" column="124" selection-start-line="46" selection-start-column="122" selection-end-line="46" selection-end-column="124" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="30" column="85" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -183,8 +171,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="26" selection-end-line="203" />
+            <state relative-caret-position="150">
+              <caret line="122" column="90" selection-start-line="122" selection-start-column="84" selection-end-line="122" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -194,7 +182,6 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>hom</find>
-      <find>upda</find>
       <find>liste-nutritionnistet-front</find>
       <find>file</find>
       <find>titre</find>
@@ -205,6 +192,15 @@
       <find>nutritionnisteli</find>
       <find>update</find>
       <find>updateModal</find>
+      <find>delet</find>
+      <find>type</find>
+      <find>dele</find>
+      <find>re</find>
+      <find>remo</find>
+      <find>fer</find>
+      <find>fermer</find>
+      <find>upda</find>
+      <find>background-image: url(/front/images/image-10-1920x232.jpg)</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -213,26 +209,26 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/templates/nutritionniste/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/templates/regime/index.html.twig" />
-        <option value="$PROJECT_DIR$/templates/base-front.html.twig" />
-        <option value="$PROJECT_DIR$/templates/footer.html.twig" />
         <option value="$PROJECT_DIR$/templates/sidebar.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/NutritionnisteRepository.php" />
         <option value="$PROJECT_DIR$/src/Entity/Regime.php" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
-        <option value="$PROJECT_DIR$/src/Form/RegimeType.php" />
-        <option value="$PROJECT_DIR$/src/Controller/RegimeController.php" />
         <option value="$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" />
-        <option value="$PROJECT_DIR$/templates/regime/liste_regime.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/NutritionnisteType.php" />
         <option value="$PROJECT_DIR$/src/Entity/Nutritionniste.php" />
+        <option value="$PROJECT_DIR$/templates/nutritionniste/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig" />
-        <option value="$PROJECT_DIR$/templates/navbar_front.html.twig" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" />
         <option value="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste_front.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/RegimeType.php" />
+        <option value="$PROJECT_DIR$/src/Controller/RegimeController.php" />
+        <option value="$PROJECT_DIR$/templates/regime/liste_regime.html.twig" />
+        <option value="$PROJECT_DIR$/templates/base-front.html.twig" />
+        <option value="$PROJECT_DIR$/templates/footer.html.twig" />
+        <option value="$PROJECT_DIR$/templates/navbar_front.html.twig" />
       </list>
     </option>
   </component>
@@ -346,6 +342,8 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -364,19 +362,48 @@
         <subPane>
           <expand>
             <path>
-              <item name="nutritionniste" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nutritionniste" type="462c0819:PsiDirectoryNode" />
+              <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="nutritionniste" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nutritionniste" type="462c0819:PsiDirectoryNode" />
+              <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="nutritionniste" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nutritionniste" type="462c0819:PsiDirectoryNode" />
+              <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="nutritionniste" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="regime" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -387,7 +414,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../anas/sporify" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
@@ -431,6 +458,7 @@
       <workItem from="1619118825906" duration="7905000" />
       <workItem from="1619300202518" duration="853000" />
       <workItem from="1619301576827" duration="10000" />
+      <workItem from="1619301596278" duration="9093000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1619123381600</created>
@@ -446,11 +474,18 @@
       <option name="project" value="LOCAL" />
       <updated>1619125105604</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test">
+      <created>1619301713738</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1619301713738</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45192000" />
+    <option name="totallyTimeSpent" value="54285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,7 +500,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.17397882" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.1762481" />
       <window_info id="Structure" order="1" sideWeight="0.5012225" side_tool="true" weight="0.21331316" />
       <window_info id="Favorites" order="2" sideWeight="0.5012225" side_tool="true" weight="0.21331316" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -478,7 +513,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.28688523" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.2852459" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.31639344" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49924356" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -487,21 +522,22 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21331316" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.1762481" />
+      <window_info id="Structure" order="1" sideWeight="0.5012225" side_tool="true" weight="0.21331316" />
+      <window_info id="Favorites" order="2" sideWeight="0.5012225" side_tool="true" weight="0.21331316" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295082" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.20327869" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.2852459" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.31639344" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49924356" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -522,13 +558,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env.test">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/nutritionniste/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/regime/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
@@ -558,38 +587,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/footer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="98" column="138" selection-start-line="98" selection-start-column="134" selection-end-line="98" selection-end-column="138" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Regime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/RegimeType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="6" selection-start-line="32" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -600,13 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="213" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="213" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sidebar.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -614,50 +608,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/RegimeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="97" column="49" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="128" column="25" selection-start-line="128" selection-start-column="25" selection-end-line="128" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base-front.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/navbar.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/navbar_front.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/nutritionniste/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="103" column="116" selection-start-line="103" selection-start-column="116" selection-end-line="103" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/NutritionnisteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="89" column="5" selection-end-line="117" />
-          <folding>
-            <element signature="e#34#64#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Nutritionniste.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="354">
           <caret line="26" column="32" selection-end-line="132" />
           <folding>
             <element signature="e#30#74#0#PHP" expanded="true" />
@@ -672,6 +635,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="39" column="56" selection-start-line="39" selection-start-column="56" selection-end-line="39" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Regime.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/RegimeType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="e#28#50#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/NutritionnisteRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -679,17 +666,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/NutritionnisteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="89" column="63" selection-start-line="89" selection-start-column="55" selection-end-line="89" selection-end-column="63" />
+          <folding>
+            <element signature="e#34#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/RegimeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="86" column="63" selection-start-line="86" selection-start-column="63" selection-end-line="86" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="26" selection-end-line="203" />
+        <state relative-caret-position="150">
+          <caret line="122" column="90" selection-start-line="122" selection-start-column="84" selection-end-line="122" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="30" column="85" selection-start-line="30" selection-start-column="84" selection-end-line="30" selection-end-column="85" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste_front.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="29" column="51" lean-forward="true" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+        <state relative-caret-position="561">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="78" column="41" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/footer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="46" column="124" selection-start-line="46" selection-start-column="122" selection-end-line="46" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base-front.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/navbar_front.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
         </state>
       </provider>
     </entry>

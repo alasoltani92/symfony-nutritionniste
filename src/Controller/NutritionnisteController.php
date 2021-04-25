@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bridge\Twig\Mime\NotificationEmail;
 
 class NutritionnisteController extends AbstractController
 {
@@ -111,6 +112,46 @@ class NutritionnisteController extends AbstractController
     private function generateUniqueFileName()
     {
         return md5(uniqid());
+    }
+
+    /**
+     * @Route("/front/liste-nutritionnistet-frontjjjjjj", name="contact")
+     */
+    public function mail(Request $request ,\Swift_Mailer $mailer,EntityManagerInterface $nut)
+    {
+        /*  $form=$this->createForm((ContactType::class));
+          $form->handleRequest($request);
+          if($form->isSubmitted()&& $form->isValid()){
+              $contact=$form->getData();
+
+              $message=(new \Swift_Message('nouveau message'))
+                  ->setFrom($contact['mail'])
+                  ->setTo( $request->request->get('nom'))
+                  ->setBody(
+                      $request->request->get('message')
+                  );
+
+              $mailer->send($message);
+              $this->addFlash('message','le message est bien ete envoyer');
+              return $this->redirectToRoute('liste_nutritionniste_front');
+          }
+         return $this->render('nutritionniste/index.html.twig', [
+              'contactform' => $form->createView()
+          ]);
+  */
+
+
+        $message = (new \Swift_Message('Hello Email'))
+            ->setFrom('soltani.taha90@gmail.com')
+            ->setTo( 'nsporify@gmail.com')
+            ->setBody('test test test !')
+        ;
+
+        $mailer->send($message);
+
+
+
+        return $this->redirectToRoute('liste_nutritionniste_front');
     }
 
 

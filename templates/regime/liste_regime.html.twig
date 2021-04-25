@@ -46,7 +46,7 @@
                             <br>
                             <div style="text-align: center">
                                 <a type="button" href="{{ path('delete_regime', {'id':g.id}) }}" class="btn btn-danger">Supprimer</a>
-                                <a type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</a>
+                                <a type="button" class="btn btn-secondary"  data-dismiss="modal">Fermer</a>
                             </div>
                             <br>
                         </div>
@@ -70,10 +70,18 @@
                                 <div class="form-group row">
                                     <div class="col-md-12">
                                         <label class="form__label">Type</label>
-                                        <input type="text" maxlength="30" name="type" value="{{ g.type }}" class="form-control">
+                                        <select class="custom-select rounded-0" name="type">
+
+                                            <option value="{{  g.type  }}" selected>{{  g.type  }}</option>
+                                            <option value="Mincisseur" selected>Mincisseur</option>
+                                            <option value="Prise De Masse" selected>Prise De Masse</option>
+
                                     </div>
                                 </div>
-                                <br>
+                                </select>
+                                </div>
+
+
                                 <div class="form-group row">
                                     <div class="col-md-12">
                                         <label class="form__label">Description</label>
@@ -125,7 +133,9 @@
                     <div class="form-group row">
                         <div class="col-md-12">
                             <label class="form__label">Type</label>
-                            {{ form_widget(form.type, {'attr': {'placeholder': 'typr regime', 'class':'form-control', 'type':'text'}}) }}
+                            {{ form_widget(form.type, {'attr': {'placeholder': 'typr regime', 'class':'form-control', 'type':''}}) }}
+
+
                         </div>
                     </div>
                     <br>
