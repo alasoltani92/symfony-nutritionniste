@@ -46,10 +46,12 @@ class NutritionnisteController extends AbstractController
             $nut->flush();
             return $this->redirectToRoute('admin_nutritionniste');
         }
+        $this->addFlash('success', 'It sent!');
        // return $this->render('nutritionniste/liste_nutritionniste.html.twig', ["form"=>$form->createView(), "nutritionniste"=>$nutritionniste]);
         $nutritionniste=$repository->findAll();
-        return $this->render('nutritionniste/liste_nutritionniste.html.twig',["form"=>$form->createView(), 'nutritionniste'=>$nutritionniste]);
 
+
+        return $this->render('nutritionniste/liste_nutritionniste.html.twig',["form"=>$form->createView(), 'nutritionniste'=>$nutritionniste]);
     }
 
 
@@ -66,11 +68,11 @@ class NutritionnisteController extends AbstractController
             $nutritionniste->setno($request->request->get('no'));
             $nutritionniste->setprenom($request->request->get('prenom'));
             $nutritionniste->setaddr($request->request->get('addr'));
-            $nutritionniste->setmail( $request->request->get('mail'));
-            $nutritionniste->setnum( $request->request->get('num'));
+            $nutritionniste->setmail($request->request->get('mail'));
+            $nutritionniste->setnum($request->request->get('num'));
             $file = $request->files->get('image');
-            if (!empty($file)){
-                $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            if (!empty($file)) {
+                $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
                 $file->move(
                     $this->getParameter('$uploads'),
                     $fileName
@@ -79,7 +81,13 @@ class NutritionnisteController extends AbstractController
             }
 
             $nut->flush();
+
+
             return $this->redirectToRoute('admin_nutritionniste');
+
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->addFlash('success', 'Article Created! Knowledge is power!');
+            }
         }
 
     }
