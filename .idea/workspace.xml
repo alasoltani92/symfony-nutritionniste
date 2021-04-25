@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60e283f4-2cb2-44b1-81fa-d03a1f54bf77" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/nutttttttt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/nutttttttt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegimeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegimeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegimeType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar_front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar_front.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nutritionniste/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nutritionniste/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste_front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste_front.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/regime/liste_regime.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/regime/liste_regime.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,16 +47,16 @@
         <counts>
           <entry key="env" value="85" />
           <entry key="php" value="750" />
-          <entry key="twig" value="908" />
-          <entry key="txt" value="4" />
+          <entry key="twig" value="917" />
+          <entry key="txt" value="34" />
           <entry key="yaml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PHP" value="750" />
-          <entry key="PLAIN_TEXT" value="89" />
-          <entry key="Twig" value="908" />
+          <entry key="PLAIN_TEXT" value="119" />
+          <entry key="Twig" value="917" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
@@ -135,8 +120,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base-front.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            <state relative-caret-position="119">
+              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -144,8 +129,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/navbar_front.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="155" selection-start-line="155" selection-end-line="155" />
+            <state relative-caret-position="204">
+              <caret line="160" column="98" lean-forward="true" selection-start-line="160" selection-start-column="98" selection-end-line="160" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -154,7 +139,7 @@
         <entry file="file://$PROJECT_DIR$/templates/footer.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="46" column="124" selection-start-line="46" selection-start-column="122" selection-end-line="46" selection-end-column="124" />
+              <caret line="55" column="101" selection-start-line="55" selection-start-column="99" selection-end-line="55" selection-end-column="101" />
             </state>
           </provider>
         </entry>
@@ -186,7 +171,6 @@
       <find>file</find>
       <find>titre</find>
       <find>uploads</find>
-      <find>image</find>
       <find>news</find>
       <find>list</find>
       <find>nutritionnisteli</find>
@@ -201,6 +185,8 @@
       <find>fermer</find>
       <find>upda</find>
       <find>background-image: url(/front/images/image-10-1920x232.jpg)</find>
+      <find>home</find>
+      <find>image</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -346,7 +332,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="136" />
     <option name="y" value="284" />
     <option name="width" value="1104" />
@@ -458,7 +444,7 @@
       <workItem from="1619118825906" duration="7905000" />
       <workItem from="1619300202518" duration="853000" />
       <workItem from="1619301576827" duration="10000" />
-      <workItem from="1619301596278" duration="9093000" />
+      <workItem from="1619301596278" duration="9325000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1619123381600</created>
@@ -481,11 +467,18 @@
       <option name="project" value="LOCAL" />
       <updated>1619301713738</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="controle de saisie type regime">
+      <created>1619310981935</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619310981935</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54285000" />
+    <option name="totallyTimeSpent" value="54517000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,7 +546,8 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="controle de saisie type regime" />
+    <option name="LAST_COMMIT_MESSAGE" value="controle de saisie type regime" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.env.test">
@@ -714,21 +708,21 @@
     <entry file="file://$PROJECT_DIR$/templates/footer.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="46" column="124" selection-start-line="46" selection-start-column="122" selection-end-line="46" selection-end-column="124" />
+          <caret line="55" column="101" selection-start-line="55" selection-start-column="99" selection-end-line="55" selection-end-column="101" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base-front.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        <state relative-caret-position="119">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/navbar_front.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="155" selection-start-line="155" selection-end-line="155" />
+        <state relative-caret-position="204">
+          <caret line="160" column="98" lean-forward="true" selection-start-line="160" selection-start-column="98" selection-end-line="160" selection-end-column="98" />
         </state>
       </provider>
     </entry>
