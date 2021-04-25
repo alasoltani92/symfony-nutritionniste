@@ -117,7 +117,7 @@ class NutritionnisteController extends AbstractController
     /**
      * @Route("/front/liste-nutritionnistet-frontjjjjjj", name="contact")
      */
-    public function mail(Request $request ,\Swift_Mailer $mailer,EntityManagerInterface $nut)
+    public function mail(Request $request ,\Swift_Mailer $mailer,EntityManagerInterface $mail)
     {
         /*  $form=$this->createForm((ContactType::class));
           $form->handleRequest($request);
@@ -144,7 +144,7 @@ class NutritionnisteController extends AbstractController
         $message = (new \Swift_Message('Hello Email'))
             ->setFrom('soltani.taha90@gmail.com')
             ->setTo( 'nsporify@gmail.com')
-            ->setBody('test test test !')
+            ->setBody('je veut prendre un rendez-vous')
         ;
 
         $mailer->send($message);

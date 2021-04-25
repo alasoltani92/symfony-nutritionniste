@@ -22,10 +22,11 @@ class RegimeController extends AbstractController
             'controller_name' => 'RegimeController',
         ]);
     }
+
     /**
      * @Route("/admin/regime", name="admin_regime")
      */
-    public function regimeList(Request $request, EntityManagerInterface $manager,RegimeRepository $repository): Response
+    public function regimeList(Request $request, EntityManagerInterface $manager, RegimeRepository $repository): Response
     {
         $regime = $this->getDoctrine()->getRepository(Regime::class)->findAll();
         //$regime=$repository->findAll();
@@ -34,7 +35,7 @@ class RegimeController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $file = $form->get("image")->getData();
-            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
             $file->move(
                 $this->getParameter('$uploads'),
                 $fileName
@@ -45,7 +46,33 @@ class RegimeController extends AbstractController
             $reg->flush();
             return $this->redirectToRoute('admin_regime');
         }
-       // return $this->render('regime/liste_regime.html.twig', ["form"=>$form->createView(), "regime"=>$regime]);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $file = $form->get("description")->getData();
+
+            // $file stores the uploaded PDF file
+            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
+            $file = $regime->getBrochure();
+
+            $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
+
+            // moves the file to the directory where brochures are stored
+            $file->move(
+                $this->getParameter('$brochures_directory'),
+                $fileName
+            );
+
+            // updates the 'brochure' property to store the PDF file name
+            // instead of its contents
+            $regime->setBrochure($fileName);
+
+            // ... persist the $product variable or any other work
+
+        }
+
+
+
+
+    // return $this->render('regime/liste_regime.html.twig', ["form"=>$form->createView(), "regime"=>$regime]);
         $regime=$repository->findAll();
         return $this->render('regime/liste_regime.html.twig',["form"=>$form->createView(), 'regime'=>$regime]);
 

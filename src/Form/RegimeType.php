@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Validator\Constraints\File;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
+
 class RegimeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -17,13 +18,29 @@ class RegimeType extends AbstractType
         $builder
             ->add('type',ChoiceType::class, [
                 'choices'  => [
+                    ''=>'',
 
                     'Mincisseur' => 'Mincisseur',
                     'Prise de Masse' => 'Prise de Masse',
                 ]])
 
 
-            ->add('description')
+            ->add('description',FileType::class, [
+
+
+                'constraints' => [
+                    new File([
+                        'maxSize' => '1024k',
+                        'mimeTypes' => [
+                            'application/pdf',
+                            'application/x-pdf',
+                        ],
+                        'mimeTypesMessage' => 'Please upload a valid PDF document',
+                    ])
+                ],
+            ])
+            // ...
+
             ->add('image',FileType::class, ['constraints' => [
                 new File([
                     'maxSize' => '9000k',

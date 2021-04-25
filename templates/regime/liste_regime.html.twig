@@ -15,7 +15,7 @@
             <thead>
             <tr>
                 <th scope="col">Type</th>
-                <th scope="col">Description</th>
+                <th scope="col">détail Regime</th>
                 <th scope="col">Image</th>
 
             </tr>
@@ -24,8 +24,10 @@
             {% for g in regime %}
             <tr>
                 <td >{{ g.type }}</td>
-                <td >{{ g.description }}</td>
+                <td ><a href="{{ asset('uploads/brochures/' ~ g.description) }}">détail regime (PDF)</a>
+                </td>
                 <td> <img style="width: 100px" src="{{ asset('uploads/' ~ g.image) }}"> </td>
+
 
                 <td><div style="display: flex">
 
@@ -73,6 +75,8 @@
                                         <select class="custom-select rounded-0" name="type">
 
                                             <option value="{{  g.type  }}" selected>{{  g.type  }}</option>
+                                            <option value="" selected> </option>
+
                                             <option value="Mincisseur" selected>Mincisseur</option>
                                             <option value="Prise De Masse" selected>Prise De Masse</option>
 
@@ -80,12 +84,14 @@
                                 </div>
                                 </select>
                                 </div>
+                            <br>
 
+                            <br>
 
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label class="form__label">Description</label>
-                                        <input type="type"  name="description" value="{{ g.description }}" class="form-control">
+                                        <a href="{{ asset('uploads/brochures/' ~ g.description) }}">détail regime (PDF)</a>
+                                        <input type="file" name="description" class="form-control">
                                     </div>
                                 </div>
                                 <br>
@@ -93,7 +99,7 @@
                                 <br>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label class="form__label">Photo du couverture</label>
+                                        <label class="form__label">Exemple Regime</label>
                                         <input type="file" name="image" class="form-control">
                                     </div>
                                 </div>
@@ -125,7 +131,7 @@
             <div class="modal-content">
                 {{ form_start(form, {'attr': {'enctype':'multipart/form-data'}}) }}
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouvelle Regime</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ajouter  Regime</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -141,7 +147,7 @@
                     <br>
                     <div class="form-group row">
                         <div class="col-md-12">
-                            <label class="form__label">Description</label>
+                            <label class="form__label">détail regime (PDF)</label>
                             {{ form_widget(form.description, {'attr': {'placeholder': 'description regime', 'class':'form-control'}}) }}
                         </div>
                     </div>

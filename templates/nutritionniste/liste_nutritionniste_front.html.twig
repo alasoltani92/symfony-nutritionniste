@@ -58,12 +58,16 @@
                             <div class="modal-content">
                                 <!-- Modal Header -->
                                 <div class="modal-header">
-                                    <h4 class="modal-title">Modal Heading</h4>
+                                    <h4 class="modal-title">Prendre Rendez-vous</h4>
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
                                 <!-- Modal body -->
                                 <div class="modal-body">
-                                    <input type="text" min="1" max="99" name="mail_nut_env" id="mail_nut" value="{{ n.mail }}" class="form-control">
+                                    <input type="text" min="1" max="60" name="mail_nut_env" id="mail_nut" value="{{ n.mail }}" class="form-control">
+                                </div>
+                                <div class="modal-body">
+
+                                <input type="text area" min="1" max="100" name="message"  class="form-control"  placeholder ="écrir votre message... "}}>
                                 </div>
                                 <!-- Modal footer -->
                                 <div class="modal-footer">
