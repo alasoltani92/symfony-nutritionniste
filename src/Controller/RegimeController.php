@@ -6,12 +6,12 @@ use App\Entity\Regime;
 use App\Form\RegimeType;
 use App\Repository\RegimeRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class RegimeController extends AbstractController
+class RegimeController extends Controller
 {
     /**
      * @Route("/regime", name="regime")
@@ -73,7 +73,17 @@ class RegimeController extends AbstractController
 
 
     // return $this->render('regime/liste_regime.html.twig', ["form"=>$form->createView(), "regime"=>$regime]);
-        $regime=$repository->findAll();
+
+        $allregime = $repository->findAll();
+
+        $regime= $this->get('knp_paginator')->paginate(
+        // Doctrine Query, not results
+            $allregime,
+            // Define the page parameter
+            $request->query->getInt('page', 3),
+            // Items per page
+            3
+        );
         return $this->render('regime/liste_regime.html.twig',["form"=>$form->createView(), 'regime'=>$regime]);
 
 

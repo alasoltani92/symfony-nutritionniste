@@ -6,13 +6,14 @@ use App\Entity\Nutritionniste;
 use App\Form\NutritionnisteType;
 use App\Repository\NutritionnisteRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bridge\Twig\Mime\NotificationEmail;
+use Knp\Component\Pager\PaginatorInterface;
 
-class NutritionnisteController extends AbstractController
+class NutritionnisteController extends Controller
 {
     /**
      * @Route("/nutritionniste", name="nutritionniste")
@@ -26,7 +27,7 @@ class NutritionnisteController extends AbstractController
     /**
      * @Route("/admin/nutritionniste", name="admin_nutritionniste")
      */
-    public function nutritionnisteList(Request $request, EntityManagerInterface $manager,NutritionnisteRepository $repository): Response
+    public function nutritionnisteList(Request $request, EntityManagerInterface $manager,NutritionnisteRepository $repository ,PaginatorInterface $nutritionniste): Response
     {
        // $nutritionniste = $this->getDoctrine()->getRepository(Nutritionniste::class)->findAll();
         $nutritionniste=$repository->findAll();
@@ -46,9 +47,25 @@ class NutritionnisteController extends AbstractController
             $nut->flush();
             return $this->redirectToRoute('admin_nutritionniste');
         }
+        //notif
         $this->addFlash('success', 'It sent!');
        // return $this->render('nutritionniste/liste_nutritionniste.html.twig', ["form"=>$form->createView(), "nutritionniste"=>$nutritionniste]);
         $nutritionniste=$repository->findAll();
+
+//pagination
+        $allnutritionniste = $repository->findAll();
+
+        $nutritionniste = $this->get('knp_paginator')->paginate(
+        // Doctrine Query, not results
+            $allnutritionniste,
+            // Define the page parameter
+            $request->query->getInt('page', 3),
+            // Items per page
+            3
+        );
+
+
+
 
 
         return $this->render('nutritionniste/liste_nutritionniste.html.twig',["form"=>$form->createView(), 'nutritionniste'=>$nutritionniste]);
