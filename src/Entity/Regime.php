@@ -59,7 +59,7 @@ class Regime
         return $this->description;
     }
 
-    public function setDescription(string $description): self
+    public function setDescription($description)
     {
         $this->description = $description;
 

@@ -50,22 +50,21 @@ class RegimeController extends Controller
             $file = $form->get("description")->getData();
 
             // $file stores the uploaded PDF file
-            /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
-            $file = $regime->getBrochure();
 
-            $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
+            $file = $regime->getdescription();
+
+            $fileName = md5(uniqid()) . '.' . $file->guessExtension();
 
             // moves the file to the directory where brochures are stored
             $file->move(
-                $this->getParameter('$brochures_directory'),
+                $this->getParameter('$uploads_directory'),
                 $fileName
             );
-
-            // updates the 'brochure' property to store the PDF file name
-            // instead of its contents
-            $regime->setBrochure($fileName);
-
-            // ... persist the $product variable or any other work
+            $regime->setdescription($fileName);
+            $reg = $this->getDoctrine()->getManager();
+            $reg->persist($regime);
+            $reg->flush();
+            return $this->redirectToRoute('admin_regime');
 
         }
 
@@ -98,12 +97,19 @@ class RegimeController extends Controller
             // your code
             $regime = $this->getDoctrine()->getRepository(Regime::class)->find($id);
             $regime->settype($request->request->get('type'));
-            $regime->setdescription($request->request->get('description'));
-            //$regime->setimage($request->request->get('image'));
+            $file = $request->files->get('description');
+            if (!empty($file)) {
+                $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
+                $file->move(
+                    $this->getParameter('$uploads_directory'),
+                    $fileName
+                );
+                $regime->setdescription($fileName);
+            }            //$regime->setimage($request->request->get('image'));
 
             $file = $request->files->get('image');
-            if (!empty($file)){
-                $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            if (!empty($file)) {
+                $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
                 $file->move(
                     $this->getParameter('$uploads'),
                     $fileName
