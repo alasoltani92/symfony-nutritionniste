@@ -28,11 +28,11 @@
                     {% for g in regime %}
                         <div class="col-md-3" style="margin-bottom: 40px">
                             <!-- Post-->
-                            <div class="post post-classic"><a class="post-media" href="#"><img class="post-img" src="{{ asset('uploads/' ~ g.image) }}" alt="" style="width: 200px;height: 200px; object-fit: cover">
+                            <div class="post post-classic"><a class="post-media" href="{{ asset('uploads/' ~ g.image) }}"><img class="post-img" src="{{ asset('uploads/' ~ g.image) }}" alt="" style="width: 200px;height: 200px; object-fit: cover">
                                     <div class="post-tag tag tag-secondary">News</div></a>
                                 <div class="post-body">
                                     <div class="post-title h4"><a href="#"><span>{{ g.type }}</span></a></div>
-                                    <div class="post-text">{{ g.description }}</div>
+                                    <td ><a href="{{ asset('uploads/brochures/' ~ g.description) }}">détail regime (PDF)</a>
 
                                 </div>
                             </div>

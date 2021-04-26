@@ -38,7 +38,8 @@ class RegimeController extends Controller
             $fileName = $this->generateUniqueFileName() . '.' . $file->guessExtension();
             $file->move(
                 $this->getParameter('$uploads'),
-                $fileName
+
+                
             );
             $regime->setImage($fileName);
             $reg = $this->getDoctrine()->getManager();
@@ -64,6 +65,8 @@ class RegimeController extends Controller
             $reg = $this->getDoctrine()->getManager();
             $reg->persist($regime);
             $reg->flush();
+            $this->addFlash('success', 'Regime Ajouter!');
+
             return $this->redirectToRoute('admin_regime');
 
         }
@@ -79,7 +82,7 @@ class RegimeController extends Controller
         // Doctrine Query, not results
             $allregime,
             // Define the page parameter
-            $request->query->getInt('page', 3),
+            $request->query->getInt('page', 1),
             // Items per page
             3
         );
@@ -119,6 +122,8 @@ class RegimeController extends Controller
 
 
             $nut->flush();
+            $this->addFlash('success', 'Regime Modifier!');
+
             return $this->redirectToRoute('admin_regime');
         }
 
@@ -132,6 +137,8 @@ class RegimeController extends Controller
         $regime = $this->getDoctrine()->getRepository(Regime::class)->find($id);
         $manager->remove($regime);
         $manager->flush();
+        $this->addFlash('warning', 'Regime Supprimer!');
+
         return $this->redirectToRoute('admin_regime');
     }
 

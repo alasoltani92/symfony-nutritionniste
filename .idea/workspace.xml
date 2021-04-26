@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60e283f4-2cb2-44b1-81fa-d03a1f54bf77" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RegimeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegimeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Regime.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Regime.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RegimeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegimeType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/regime/liste_regime.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/regime/liste_regime.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,45 +27,46 @@
           <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="2" />
           <entry key="json" value="1" />
-          <entry key="php" value="63" />
-          <entry key="twig" value="75" />
-          <entry key="yaml" value="7" />
+          <entry key="php" value="70" />
+          <entry key="twig" value="81" />
+          <entry key="yaml" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="1" />
-          <entry key="PHP" value="63" />
+          <entry key="PHP" value="70" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Twig" value="75" />
-          <entry key="YAML" value="7" />
+          <entry key="Twig" value="81" />
+          <entry key="YAML" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="85" />
-          <entry key="php" value="1215" />
-          <entry key="twig" value="1137" />
+          <entry key="php" value="1341" />
+          <entry key="twig" value="1198" />
           <entry key="txt" value="34" />
-          <entry key="yaml" value="12" />
+          <entry key="yaml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="1215" />
+          <entry key="PHP" value="1341" />
           <entry key="PLAIN_TEXT" value="119" />
-          <entry key="Twig" value="1137" />
-          <entry key="YAML" value="12" />
+          <entry key="Twig" value="1198" />
+          <entry key="YAML" value="13" />
         </counts>
       </usages-collector>
     </session>
@@ -90,11 +96,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/RegimeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+            <state relative-caret-position="137">
+              <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
               <folding>
                 <element signature="e#34#56#0#PHP" expanded="true" />
               </folding>
@@ -105,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Form/RegimeType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="27" column="30" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="30" />
+            <state relative-caret-position="204">
+              <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
               <folding>
                 <element signature="e#28#50#0#PHP" expanded="true" />
               </folding>
@@ -123,13 +129,43 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Regime.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+            <state relative-caret-position="71">
+              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
               <folding>
                 <element signature="e#30#66#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="30" column="116" selection-start-line="30" selection-start-column="116" selection-end-line="30" selection-end-column="116" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/NutritionnisteController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
+              <folding>
+                <element signature="e#34#64#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,6 +197,7 @@
       <find>home</find>
       <find>image</find>
       <find>ajou</find>
+      <find>It sent!</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,9 +207,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/regime/index.html.twig" />
-        <option value="$PROJECT_DIR$/templates/sidebar.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/NutritionnisteRepository.php" />
-        <option value="$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/NutritionnisteType.php" />
         <option value="$PROJECT_DIR$/src/Entity/Nutritionniste.php" />
         <option value="$PROJECT_DIR$/templates/nutritionniste/index.html.twig" />
@@ -181,17 +216,19 @@
         <option value="$PROJECT_DIR$/templates/footer.html.twig" />
         <option value="$PROJECT_DIR$/templates/navbar_front.html.twig" />
         <option value="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste_front.html.twig" />
-        <option value="$PROJECT_DIR$/src/Form/RegimeType.php" />
         <option value="$PROJECT_DIR$/config/packages/test/knp_paginator.yaml" />
         <option value="$PROJECT_DIR$/config/packages/knp_paginator.yaml" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/templates/msg.html.twig" />
         <option value="$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" />
         <option value="$PROJECT_DIR$/templates/regime/liste_regime.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/RegimeController.php" />
-        <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/templates/sidebar.html.twig" />
+        <option value="$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/NutritionnisteController.php" />
+        <option value="$PROJECT_DIR$/src/Form/RegimeType.php" />
         <option value="$PROJECT_DIR$/src/Entity/Regime.php" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/RegimeController.php" />
       </list>
     </option>
   </component>
@@ -323,7 +360,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -335,11 +371,6 @@
               <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
               <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="nutttttttt" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="nutttttttt" type="b2602c69:ProjectViewProjectNode" />
@@ -385,6 +416,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,7 +467,8 @@
       <workItem from="1619301576827" duration="10000" />
       <workItem from="1619301596278" duration="9594000" />
       <workItem from="1619351597532" duration="11001000" />
-      <workItem from="1619385646626" duration="13752000" />
+      <workItem from="1619385646626" duration="14004000" />
+      <workItem from="1619470252273" duration="7200000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1619123381600</created>
@@ -486,11 +519,18 @@
       <option name="project" value="LOCAL" />
       <updated>1619397062023</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="controle de saisie type regime">
+      <created>1619400420821</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619400420821</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79539000" />
+    <option name="totallyTimeSpent" value="86991000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -505,7 +545,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.18078668" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.18305598" />
       <window_info id="Structure" order="1" sideWeight="0.5012225" side_tool="true" weight="0.21331316" />
       <window_info id="Favorites" order="2" sideWeight="0.5012225" side_tool="true" weight="0.21331316" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -518,7 +558,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" visible="true" weight="0.2852459" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49924356" weight="0.2852459" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50075644" side_tool="true" weight="0.31639344" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49924356" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -527,7 +567,7 @@
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.1762481" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4987775" visible="true" weight="0.18305598" />
       <window_info id="Structure" order="1" sideWeight="0.5012225" side_tool="true" weight="0.21331316" />
       <window_info id="Favorites" order="2" sideWeight="0.5012225" side_tool="true" weight="0.21331316" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -590,13 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="47" lean-forward="true" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/sidebar.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="23" column="59" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -669,13 +702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/NutritionnisteType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -683,13 +709,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/test/knp_paginator.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="83" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/test/knp_paginator.yaml" />
     <entry file="file://$PROJECT_DIR$/config/packages/test/doctrine.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -715,52 +735,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="1" selection-start-column="1" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <element signature="e#302#309#1#HTML" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sidebar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime_front.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="30" column="116" selection-start-line="30" selection-start-column="116" selection-end-line="30" selection-end-column="116" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/NutritionnisteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="64" column="10" selection-start-line="55" selection-start-column="6" selection-end-line="64" selection-end-column="10" />
+        <state relative-caret-position="204">
+          <caret line="63" column="45" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
           <folding>
             <element signature="e#34#64#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/nutritionniste/liste_nutritionniste.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="141" column="10" selection-start-line="139" selection-start-column="3" selection-end-line="141" selection-end-column="10" />
+        <state relative-caret-position="124">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/regime/liste_regime.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Regime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
+        <state relative-caret-position="71">
+          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+          <folding>
+            <element signature="e#30#66#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/RegimeType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="30" />
+        <state relative-caret-position="204">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
           <folding>
             <element signature="e#28#50#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/RegimeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
-          <folding>
-            <element signature="e#34#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -772,12 +803,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Regime.php">
+    <entry file="file://$PROJECT_DIR$/src/Controller/RegimeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        <state relative-caret-position="137">
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
           <folding>
-            <element signature="e#30#66#0#PHP" expanded="true" />
+            <element signature="e#34#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

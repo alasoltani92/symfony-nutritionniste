@@ -40,15 +40,17 @@ class NutritionnisteController extends Controller
             $file->move(
                 $this->getParameter('$uploads'),
                 $fileName
+
             );
             $nutritionniste->setImage($fileName);
             $nut=$this->getDoctrine()->getManager();
             $nut->persist($nutritionniste);
             $nut->flush();
+            $this->addFlash('success', 'Nutrisionniste Ajouter!');
             return $this->redirectToRoute('admin_nutritionniste');
         }
         //notif
-        $this->addFlash('success', 'It sent!');
+
        // return $this->render('nutritionniste/liste_nutritionniste.html.twig', ["form"=>$form->createView(), "nutritionniste"=>$nutritionniste]);
         $nutritionniste=$repository->findAll();
 
@@ -59,8 +61,8 @@ class NutritionnisteController extends Controller
         // Doctrine Query, not results
             $allnutritionniste,
             // Define the page parameter
-            $request->query->getInt('page', 3),
-            // Items per page
+            $request->query->getInt('page', 1),
+            // ItemIt sent!s per page
             3
         );
 
@@ -99,12 +101,12 @@ class NutritionnisteController extends Controller
 
             $nut->flush();
 
-
+            $this->addFlash('success', 'Nutrisionniste Modifier!');
             return $this->redirectToRoute('admin_nutritionniste');
 
-            if ($form->isSubmitted() && $form->isValid()) {
-                $this->addFlash('success', 'Article Created! Knowledge is power!');
-            }
+
+
+
         }
 
     }
@@ -117,6 +119,7 @@ class NutritionnisteController extends Controller
         $nutritionniste = $this->getDoctrine()->getRepository(Nutritionniste::class)->find($id);
         $manager->remove($nutritionniste);
         $manager->flush();
+        $this->addFlash('warning', 'Nutrisionniste Supprimer!');
         return $this->redirectToRoute('admin_nutritionniste');
     }
 
