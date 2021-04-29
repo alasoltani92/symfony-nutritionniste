@@ -1,0 +1,199 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <div class="content">
+        <div style="display: flex; align-items: center; justify-content: space-between">
+            <h1 style="margin-right: 20px">Liste des Info</h1>
+            <button data-bs-toggle="modal" data-bs-target="#addModal" class="btn btn-outline-success" style="width: 100px"><i class="nc-icon nc-simple-add" style="font-size: 28px"></i></button>
+        </div>
+        <br>
+
+        <br>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">nom</th>
+                <th scope="col">prenon</th>
+                <th scope="col">mail</th>
+                <th scope="col">age</th>
+                <th scope="col">Date</th>
+                <th scope="col">experience</th>
+
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for i in info %}
+                <tr>
+                    <td >{{ i.nom }}</td>
+                    <td >{{ i.prenom }}</td>
+                    <td>{{ i.mail }}</td>
+                    <td>{{ i.age}}</td>
+                    <td>{{ i.date|date("m-d-Y") }}</td>
+                    <td>{{ i.experience }}</td>
+                    <td><div style="display: flex">
+
+                            <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#updateModal{{ i.id }}" style="margin-right: 10px"><i class="nc-icon nc-settings"></i></button>
+
+                            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal{{ i.id }}"><i class="nc-icon nc-simple-delete"></i></button>
+
+                        </div>
+                    </td>
+                </tr>
+                <!-- Delete Modal -->
+              <div class="modal fade" id="deleteModal{{ i.id }}" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <br>
+                                <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimer info {{ i.nom }}</h5>
+                                <br>
+                                <div style="text-align: center">
+                                    <a type="button" href="{{ path('delete_info', {'id':i.id}) }}" class="btn btn-danger">Supprimer</a>
+                                    <a type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</a>
+                                </div>
+                                <br>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--  Update Modal -->
+                <div class="modal fade" id="updateModal{{ i.id }}" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <form method="post" action="{{ path('update_info', {'id':i.id}) }}" enctype="multipart/form-data">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modifier la info </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <br>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label class="form__label">nom</label>
+                                            <input type="text" maxlength="30" name="nom" value="{{ i.nom }}" class="form-control">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label class="form__label">prenom</label>
+                                            <input type="text" name="prenom" value="{{ i.prenom }}" class="form-control">
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <br>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label class="form__label">mail</label>
+                                            <input type="text" name="mail" value="{{ i.mail }}" class="form-control">                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label class="form__label">age</label>
+                                            <input type="number" name="age" value="{{ i.age }}" class="form-control">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label class="form__label">Date </label>
+                                            <input type="date" name="date" value="{{ i.date|date('Y-m-d') }}" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label class="form__label">experience</label>
+                                            <input type="text" maxlength="30" name="experience" value="{{ i.experience }}" class="form-control">
+                                        </div>
+                                    </div>
+                                    <br>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Modifier</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                                </div>
+                            </form>
+                        </div>
+            </div>
+
+            {% endfor %}
+                </div>
+            </tbody>
+
+        </table>
+    </div>
+
+
+    <!-- Add Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                {{ form_start(form, {'attr': {'enctype':'multipart/form-data'}}) }}
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ajouter une nouvelle info</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="form__label">Nom</label>
+                            {{ form_widget(form.nom, {'attr': {'placeholder': 'nom', 'class':'form-control', 'type':'text'}}) }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="form__label">Prenom</label>
+                            {{ form_widget(form.prenom, {'attr': {'placeholder': 'prenom', 'class':'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group row">
+
+                        <div class="col-md-12">
+                            <label class="form__label">E-mail</label>
+                            {{ form_widget(form.mail, {'attr': {'placeholder': 'mail', 'class':'form-control', 'type':'text'}}) }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+
+                        <div class="col-md-12">
+                            <label class="form__label">Age</label>
+                            {{ form_widget(form.age, {'attr': {'placeholder': 'age', 'class':'form-control', 'type':'text'}}) }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="form__label">Date </label>
+                            {{ form_widget(form.date, {'attr': {'class':'form-control'}}) }}
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="form__label">Experience </label>
+                            {{ form_widget(form.experience, {'attr': {'class':'form-control'}}) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

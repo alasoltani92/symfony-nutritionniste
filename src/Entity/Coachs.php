@@ -2,14 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\NutritionnisteRepository;
+use App\Repository\CoachsRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity(repositoryClass=NutritionnisteRepository::class)
+ * @ORM\Entity(repositoryClass=CoachsRepository::class)
  */
-class Nutritionniste
+class Coachs
 {
     /**
      * @ORM\Id
@@ -21,7 +20,7 @@ class Nutritionniste
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $no;
+    private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -35,37 +34,32 @@ class Nutritionniste
 
     /**
      * @ORM\Column(type="string", length=255)
-     *  @Assert\Email(
-     *     message = "le email '{{ value }}' n'est pas valid email."
-     * )
      */
     private $mail;
 
     /**
      * @ORM\Column(type="integer")
-     *  @Assert\Length(min = 8, max = 8, minMessage = "min_lenght", maxMessage = "max_lenght")
-     *
      */
     private $num;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $image;
+    private $photo;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNo(): ?string
+    public function getNom(): ?string
     {
-        return $this->no;
+        return $this->nom;
     }
 
-    public function setNo(string $no): self
+    public function setNom(string $nom): self
     {
-        $this->no = $no;
+        $this->nom = $nom;
 
         return $this;
     }
@@ -118,14 +112,14 @@ class Nutritionniste
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getPhoto(): ?string
     {
-        return $this->image;
+        return $this->photo;
     }
 
-    public function setImage(string $image): self
+    public function setPhoto(string $photo): self
     {
-        $this->image = $image;
+        $this->photo = $photo;
 
         return $this;
     }

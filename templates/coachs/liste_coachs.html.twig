@@ -4,51 +4,53 @@
 {% block body %}
 
 
-
     <div class="content">
-        {% include 'msg.html.twig' %}
         <div style="display: flex; align-items: center; justify-content: space-between">
+            <h1 style="margin-right: 20px">Liste des Coachs</h1>
 
-            <h1 style="margin-right: 20px">Liste des Nutritionniste</h1>
+            <div style="margin-left: 200px">
+
+
+                <script src="{{ asset('back/js/jquery.min.js') }}"></script>
+                <div class="input-group no-border">
+                    <center><input type="text" id="search" class="form-control" placeholder="Search Coach"></center>
+                    <div class="input-group-text">
+                        <i class="nc-icon nc-zoom-split"></i>
+                    </div>
+                </div>
+
+
+                </div>
+
+
             <button data-bs-toggle="modal" data-bs-target="#addModal" class="btn btn-outline-success" style="width: 100px"><i class="nc-icon nc-simple-add" style="font-size: 28px"></i></button>
         </div>
-        <form>
-        <div class="input-group no-border">
-
-            <script src="{{ asset('back/js/jquery.min.js') }}"></script>
-            <div class="input-group no-border">
-                <center><input type="text" id="search" class="form-control" placeholder="Search Coach"></center>
-                <div class="input-group-text">
-                    <i class="nc-icon nc-zoom-split"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <table class="table table-bordered dataTable" id="tableac" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
 
 
-    <thead>
+        <br>
+        <table class="table table-bordered dataTable" id="tableac" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+            <thead>
             <tr>
-                <th scope="col">Image</th>
                 <th scope="col">Nom</th>
                 <th scope="col">Prenom</th>
                 <th scope="col">Adresse</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Teléphone</th>
+                <th scope="col">Photo</th>
                 <th scope="col">Actions</th>
+
             </tr>
             </thead>
             <tbody>
 
 
-            <tr {% for n in nutritionniste %}>
-                <td> <img style="width: 100px" src="{{ asset('uploads/' ~ n.image) }}"> </td>
-                <td >{{ n.no}}</td>
+            <tr {% for n in coachs %}>
+                <td >{{ n.nom}}</td>
                 <td >{{ n.prenom }}</td>
                 <td>{{ n.addr }}</td>
                 <td>{{ n.mail }}</td>
                 <td>{{ n.num }}</td>
+                <td> <img style="width: 100px" src="{{ asset('uploads/' ~ n.photo) }}"> </td>
                 <td><div style="display: flex">
 
                         <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#updateModal{{ n.id }}" style="margin-right: 10px"><i class="nc-icon nc-settings"></i></button>
@@ -93,10 +95,10 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             <br>
-                            <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimer la nutritionniste {{ n.no }}</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Voulez vous supprimer le coach? {{ n.nom }}</h5>
                             <br>
                             <div style="text-align: center">
-                                <a type="button" href="{{ path('delete_nutritionniste', {'id':n.id}) }}" class="btn btn-danger">Supprimer</a>
+                                <a type="button" href="{{ path('delete_coachs', {'id':n.id}) }}" class="btn btn-danger">Supprimer</a>
                                 <a type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</a>
                             </div>
                             <br>
@@ -111,24 +113,17 @@
             <div class="modal fade" id="updateModal{{ n.id }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                        <form method="post" action="{{ path('update_nutritionniste', {'id':n.id}) }}" enctype="multipart/form-data">
+                        <form method="post" action="{{ path('update_coachs', {'id':n.id}) }}" enctype="multipart/form-data">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modifier Nutritionniste </h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Modifier Coachs </h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                                 <br>
                                 <div class="form-group row">
                                     <div class="col-md-12">
-                                        <label class="form__label">Photo du couverture</label>
-                                        <input type="file" name="image" class="form-control">
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="form-group row">
-                                    <div class="col-md-12">
                                         <label class="form__label">Nom</label>
-                                        <input type="text" maxlength="30" name="no" value="{{ n.no }}" class="form-control">
+                                        <input type="text" maxlength="30" name="nom" value="{{ n.nom }}" class="form-control">
                                     </div>
                                 </div>
                                 <br>
@@ -162,6 +157,14 @@
                                     </div>
                                 </div>
                                 <br>
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <label class="form__label">Photo du Coach</label>
+                                        <input type="file" name="photo" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                                <br>
                                 <div class="modal-footer">
                                     <button type="submit" class="btn btn-primary">Modifier</button>
                                     <button type="button" class="btn btn-secondary">Fermer</button>
@@ -176,50 +179,41 @@
             </tbody>
 
         </table>
+        <div class="navigation">
+            {{ knp_pagination_render(coachs) }}
+        </div>
+
     </div>
 
-
-    </table>
-    <div class="navigation">
-        {{ knp_pagination_render(nutritionniste) }}
-    </div>
 
     <!-- Add Modal -->
     <div class="modal fade" id="addModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                {{ form_start(form, {'attr': {'enctype':'multipart/form-data'}}) }}
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ajouter un Nouvelle Nutritionniste</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau Coach</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <br>
                     <div class="form-group row">
                         <div class="col-md-12">
-                            <label class="form__label">Photo Nutritionniste</label>
-                            {{ form_widget(form.image, {'attr': {'class':'form-control'}}) }}
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form-group row">
-                        <div class="col-md-12">
                             <label class="form__label">Nom</label>
-                            {{ form_widget(form.no, {'attr': {'placeholder': 'Nom  nutritionniste', 'class':'form-control', 'type':'text'}}) }}
+                            {{ form_widget(form.nom, {'attr': {'placeholder': 'Nom  coachs', 'class':'form-control', 'type':'text'}}) }}
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <div class="col-md-12">
                             <label class="form__label">Prenom</label>
-                            {{ form_widget(form.prenom, {'attr': {'placeholder': 'Prenom nutritionniste', 'class':'form-control'}}) }}
+                            {{ form_widget(form.prenom, {'attr': {'placeholder': 'Prenom coachs', 'class':'form-control'}}) }}
                         </div>
                     </div>
                     <div class="form-group row">
 
                         <div class="col-md-12">
                             <label class="form__label">Adresse</label>
-                            {{ form_widget(form.addr, {'attr': {'placeholder': 'Adresse nutritionniste', 'class':'form-control', 'type':'text'}}) }}
+                            {{ form_widget(form.addr, {'attr': {'placeholder': 'Adresse coachs', 'class':'form-control', 'type':'text'}}) }}
                         </div>
                     </div>
                     <br>
@@ -227,19 +221,26 @@
 
                         <div class="col-md-12">
                             <label class="form__label">E-mail</label>
-                            {{ form_widget(form.mail, {'attr': {'placeholder': 'E-mail nutritionniste', 'class':'form-control', 'type':'text'}}) }}
+                            {{ form_widget(form.mail, {'attr': {'placeholder': 'E-mail coachs', 'class':'form-control', 'type':'text'}}) }}
                         </div>
                     </div>
                     <br>
                     <div class="form-group row">
                         <div class="col-md-12">
                             <label class="form__label">Telephone</label>
-                            {{ form_widget(form.num, {'attr': {'placeholder': 'Telephone nutritionniste', 'class':'form-control', 'type':'text'}}) }}
+                            {{ form_widget(form.num, {'attr': {'placeholder': 'Telephone Coach', 'class':'form-control', 'type':'text'}}) }}
                         </div>
                     </div>
                     <br>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="form__label">Photo du Coach</label>
+                            {{ form_widget(form.photo, {'attr': {'class':'form-control'}}) }}
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
+
                     <button type="submit" class="btn btn-primary">Enregistrer</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                 </div>
@@ -247,5 +248,6 @@
             </div>
         </div>
     </div>
+
 
 {% endblock %}

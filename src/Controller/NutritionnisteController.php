@@ -75,7 +75,6 @@ class NutritionnisteController extends Controller
 
 
 
-
     /**
      * @Route("admin/update-nutritionniste/{id}", name="update_nutritionniste")
      */

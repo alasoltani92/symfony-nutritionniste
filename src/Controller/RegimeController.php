@@ -39,7 +39,7 @@ class RegimeController extends Controller
             $file->move(
                 $this->getParameter('$uploads'),
 
-                
+
             );
             $regime->setImage($fileName);
             $reg = $this->getDoctrine()->getManager();

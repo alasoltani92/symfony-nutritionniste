@@ -1,0 +1,52 @@
+{% extends 'base-front.html.twig' %}
+
+
+
+
+
+    {% block content %}
+        <section class="section breadcrumb-section" style="background-image: url({{ asset('front/images/image-10-1920x232.jpg') }})">
+            <div class="container">
+                <h2 class="breadcrumb-section-title">News 1</h2>
+                <!-- Breadcrumb-->
+                <div class="breadcrumb">
+                    <div class="breadcrumb-inner">
+                        <div class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Home</a></div>
+                        <div class="breadcrumb-item"><a class="breadcrumb-link" href="#">News</a></div>
+                        <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">News 1</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-md bg-transparent">
+            <div class="container">
+                <h3>Liste des coachs:</h3>
+
+                <div class="row">
+                    {% for g in info %}
+                        <div class="col-md-3" style="margin-bottom: 40px">
+                            <!-- Post-->
+                                    <div class="post-tag tag tag-secondary">News</div></a>
+                                <div class="post-body">
+                                    <div class="post-title h4"><a href="#"><span>{{ g.nom }}</span></a></div>
+                                    <div class="post-text">{{ g.prenom }}</div>
+                                    <div class="post-text">{{ g.age }}</div>
+                                    <div class="post-text">{{ g.mail }}</div>
+                                    <div>class="post-text">{{ g.date|date("m-d-Y") }}</div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+            </div>
+        </section>
+
+
+
+    {% endblock %}
